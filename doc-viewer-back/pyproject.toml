@@ -1,0 +1,25 @@
+[project]
+name = "doc-viewer-back"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Gamaliel Jimenez",email = "egjimenezg@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi (>=0.118.0,<0.119.0)",
+    "uvicorn (>=0.37.0,<0.38.0)"
+]
+
+[tool.poetry]
+packages = [{include = "doc_viewer_back", from = "src"}]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "alembic (>=1.16.5,<2.0.0)"
+]
